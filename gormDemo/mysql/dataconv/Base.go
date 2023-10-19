@@ -1,23 +1,18 @@
 package dataconv
 
-import (
-	"time"
-)
+import "time"
 
 // 9
 type Base struct {
-	Id string `gorm:"primarykey"`
-
+	Id          string `gorm:"primarykey"`
 	CreatedDate time.Time
 	ModifyDate  time.Time
 	DeletedDate time.Time
-
-	CreatedBy string
-	ModifyBy  string
-	DeletedBy string
-
-	Deleted MyBool
-	version uint
+	CreatedBy   string
+	ModifyBy    string
+	DeletedBy   string
+	Deleted     MyBool
+	version     uint
 }
 
 // 11+2
@@ -48,17 +43,14 @@ type PaymentInfo struct {
 	PaymentDescription string
 }
 
-// 3
-type Expense struct {
-	Base
-	RequestInfo
-	PaymentInfo
-
-	ExpenseId        string
-	Description      string
-	DescriptionAudit string
-}
-
-func (Expense) TableName() string {
-	return "expense"
+type BaseNode struct {
+	Owner       string
+	OwnerRegion string
+	Region      string
+	Stage       string
+	Status      string
+	Hid         string
+	Product     string
+	Agree       string
+	Payment     string
 }
