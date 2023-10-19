@@ -1,6 +1,8 @@
 package dataconv
 
-import "time"
+import (
+	"time"
+)
 
 // 9
 type Base struct {
@@ -44,13 +46,16 @@ type PaymentInfo struct {
 }
 
 type BaseNode struct {
-	Owner       string
-	OwnerRegion string
-	Region      string
-	Stage       string
 	Status      string
-	Hid         string
-	Product     string
 	Agree       string
 	Payment     string
+	Region      string
+	Product     string
+	Hid         string
+	Stage       string
+	Type        string
+	Number      int
+	Money       float64
+	Owner       string
+	OwnerRegion string
 }
