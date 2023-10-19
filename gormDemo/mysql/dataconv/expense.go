@@ -5,17 +5,17 @@ import (
 )
 
 type Base struct {
-	Id [33]byte `gorm:"primarykey"`
+	Id string `gorm:"primarykey"`
 
 	CreatedDate time.Time
 	ModifyDate  time.Time
 	DeletedDate time.Time
 
-	CreatedBy [33]byte
-	ModifyBy  [33]byte
-	DeletedBy [33]byte
+	CreatedBy string
+	ModifyBy  string
+	DeletedBy string
 
-	Deleted bool `gorm:"index"`
+	//Deleted bool
 	version uint
 }
 type RequestInfo struct {
@@ -29,7 +29,7 @@ type RequestInfo struct {
 	OwnerRegion51   string
 	OwnerRegion32   string
 	Status          string
-	Agree           string
+	//Agree           string
 }
 type PaymentInfo struct {
 	CountMoney    float64
@@ -44,6 +44,11 @@ type Expense struct {
 	RequestInfo
 	PaymentInfo
 
-	ExpenseId   [8]byte
 	Description string
+	Id          string
+	ExpenseId   string
+}
+
+func (Expense) TableName() string {
+	return "expense"
 }
