@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// 9
 type Base struct {
 	Id string `gorm:"primarykey"`
 
@@ -18,6 +19,8 @@ type Base struct {
 	Deleted MyBool
 	version uint
 }
+
+// 11+2
 type RequestInfo struct {
 	RequestDate     time.Time
 	RequestPerson   string
@@ -29,24 +32,31 @@ type RequestInfo struct {
 	OwnerRegion51   string
 	OwnerRegion32   string
 	Status          string
-	//Agree           string
+	Agree           string
+	HasCross        MyBool
+	HasRead         MyBool
 }
+
+// 7
 type PaymentInfo struct {
-	CountMoney    float64
-	Payment       float64
-	UnPayment     float64
-	PaymentPID    string
-	PaymentPerson string
-	PaymentDate   time.Time
+	CountMoney         float64
+	Payment            float64
+	UnPayment          float64
+	PaymentPID         string
+	PaymentPerson      string
+	PaymentDate        time.Time
+	PaymentDescription string
 }
+
+// 3
 type Expense struct {
 	Base
 	RequestInfo
 	PaymentInfo
 
-	Description string
-	Id          string
-	ExpenseId   string
+	ExpenseId        string
+	Description      string
+	DescriptionAudit string
 }
 
 func (Expense) TableName() string {
