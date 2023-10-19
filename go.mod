@@ -21,3 +21,13 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+require (
+	gorm.io/driver/mysql v1.5.2
+	gorm.io/gorm v1.25.5
+)
+
+require (
+	github.com/godoes/gorm-oracle v1.3.56 // indirect
+	github.com/mattn/go-oci8 v0.1.1
+)
