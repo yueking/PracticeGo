@@ -1,0 +1,10 @@
+prefix=/usr/local/oracle/instantclient_10_1/
+libdir=${prefix}
+includedir=${prefix}/sdk/include/
+
+Name: oci8
+Description: Oracle Instant Client
+Version: 10.1
+Libs: -L${libdir} -lclntsh
+Libs.private:
+Cflags: -I${includedir}

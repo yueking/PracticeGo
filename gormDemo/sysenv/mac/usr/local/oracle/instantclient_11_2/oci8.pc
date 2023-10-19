@@ -1,0 +1,11 @@
+# prefix=/Users/yueking/Developer/Fromeworker/oracle/instantclient_11_2/
+prefix=/usr/local/oracle/instantclient_11_2/
+libdir=${prefix}
+includedir=${prefix}/sdk/include/
+
+Name: oci8
+Description: Oracle Instant Client
+Version: 11.2
+Libs: -L${libdir} -lclntsh
+Libs.private:
+Cflags: -I${includedir}
