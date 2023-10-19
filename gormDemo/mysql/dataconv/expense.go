@@ -15,7 +15,7 @@ type Base struct {
 	ModifyBy  string
 	DeletedBy string
 
-	//Deleted bool
+	Deleted MyBool
 	version uint
 }
 type RequestInfo struct {

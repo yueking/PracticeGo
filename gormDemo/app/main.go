@@ -40,5 +40,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(resultList)
+	for _, expense := range resultList {
+		fmt.Println(expense.ExpenseId)
+	}
 }
