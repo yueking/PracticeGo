@@ -1,6 +1,7 @@
-package dataconv
+package newspace
 
 import (
+	"PracticeProjects/gormDemo/mysql/dataconv"
 	"time"
 )
 
@@ -13,7 +14,7 @@ type Base struct {
 	CreatedBy   string
 	ModifyBy    string
 	DeletedBy   string
-	Deleted     MyBool
+	Deleted     dataconv.MyBool
 	version     uint
 }
 
@@ -30,8 +31,8 @@ type RequestInfo struct {
 	OwnerRegion32   string
 	Status          string
 	Agree           string
-	HasCross        MyBool
-	HasRead         MyBool
+	HasCross        dataconv.MyBool
+	HasRead         dataconv.MyBool
 }
 
 // 7

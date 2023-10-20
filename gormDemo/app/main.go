@@ -1,7 +1,7 @@
 package main
 
 import (
-	"PracticeProjects/gormDemo/mysql/dataconv"
+	"PracticeProjects/gormDemo/mysql/dataconv/model/newspace"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -35,7 +35,7 @@ func main() {
 	//}
 	//fmt.Println(resultList)
 
-	var resultList []dataconv.Expense
+	var resultList []newspace.Expense
 	err = db.Find(&resultList).Error
 	if err != nil {
 		panic(err)

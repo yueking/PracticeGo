@@ -1,4 +1,4 @@
-package dataconv
+package newspace
 
 type BusinessTrip struct {
 	Base
