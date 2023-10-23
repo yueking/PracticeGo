@@ -3,7 +3,8 @@ package lhmis
 import "time"
 
 type YwRequisition struct {
-	R_ID               string
+	R_ID string `json:"id"`
+
 	REQUESTDATE        time.Time
 	DESCRIPTION        string
 	REQUEST_PERSON     string

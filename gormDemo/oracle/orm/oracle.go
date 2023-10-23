@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	user := YwUser{Name: "yueking", Age: 25, ID: 5}
+	user := YwUser{Name: "yueking", Age: 25, ID: 6}
 	err = db.Create(&user).Error
 	if err != nil {
 		panic(err)
